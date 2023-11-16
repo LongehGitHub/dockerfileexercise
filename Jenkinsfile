@@ -37,7 +37,7 @@ pipeline {
                 docker rm nginx && echo "removed nginx" || echo "nginx does not exist"
                 docker stop flask-app && echo "Stopped flask-app" || echo "flask-app is not running"
                 docker rm flask-app && echo "removed flask-app" || echo "flask-app does not exist"
-                docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=${YOUR_NAME} longehdocker/task2-db
+                docker run -d --name mysql --network task2-net -e MYSQL_ROOT_PASSWORD=${YOUR_NAME} longehdocker/task2-db
                 docker run -d --name flask-app --network task2-net -e MYSQL_ROOT_PASSWORD=${YOUR_NAME} longehdocker/task2jenk
                 docker run -d --name nginx --network task2-net -p 80:80 longehdocker/task2-nginx
                 '''
