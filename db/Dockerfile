@@ -8,7 +8,7 @@ FROM mysql:5.7
 
 # For hints on how to do this, consult the mysql 5.7 image documentation
 
-ENV MYSQL_ROOT_PASSWORD=${YOUR_NAME} MYSQL_DATABASE=flask-db
+ENV MYSQL_ROOT_PASSWORD=password MYSQL_DATABASE=flask-db
 
 # Add the content of the .sql file to your image
 
