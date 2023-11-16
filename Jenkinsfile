@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                docker build -t longehdocker/task2-db 
+                docker build -t longehdocker/task2-db mysql
                 docker build -t longehdocker/task2jenk .
                 docker build -t longehdocker/task2-nginx nginx
                 '''
