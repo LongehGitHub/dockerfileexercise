@@ -9,8 +9,8 @@ spec:
   - image: longehdocker/task2-app
     name: task2-app
     env:
-      - name: MYSQL_ROOT_PASSWORD
-        value: Password
+    - name: MYSQL_ROOT_PASSWORD
+      value: Password
 ---
 apiVersion: v1
 kind: Service
@@ -23,9 +23,9 @@ spec:
   selector:
     app: flask
   ports:
-    - port: 80
-      targetPort: 5000
-      protocol: TCP
+  - port: 80
+    targetPort: 5000
+    protocol: TCP
 #---
 #apiVersion: v1
 #kind: Service
