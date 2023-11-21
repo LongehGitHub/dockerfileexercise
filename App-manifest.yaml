@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: task2-app
   labels:
-    app: task2-app
+    app: flask
 spec:
   containers:
   - image: longehdocker/task2-app
@@ -17,11 +17,11 @@ kind: Service
 metadata:
   name: flask-app
   labels:
-    app: task2-app
+    app: flask
 spec:
   type: LoadBalancer
   selector:
-    app: task2-app
+    app: flask
   ports:
     - port: 80
       targetPort: 5000
