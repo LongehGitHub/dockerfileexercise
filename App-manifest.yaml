@@ -9,7 +9,7 @@ spec:
   - image: longehdocker/task2jenk
     name: task2
     env:
-      - name: MY_SQL_PASSWORD
+      - name: MYSQL_ROOT_PASSWORD
         value: Password
 ---
 apiVersion: v1
@@ -26,18 +26,18 @@ spec:
     - port: 80
       targetPort: 5000
       protocol: TCP
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx
-  labels:
-    app: task2-nginx
-spec:
-  type: LoadBalancer
-  selector:
-    app: task2-nginx
-  ports:
-    - port: 80
-      targetPort: 80
-      protocol: TCP
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: nginx
+#  labels:
+#    app: task2-nginx
+#spec:
+#  type: LoadBalancer
+#  selector:
+#    app: task2-nginx
+#  ports:
+#    - port: 80
+#      targetPort: 80
+#      protocol: TCP

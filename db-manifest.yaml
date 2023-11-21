@@ -6,7 +6,7 @@ metadata:
     app: task2-db
 spec:
   containers:
-  - image: longehdocker/task2jenk
+  - image: longehdocker/task2-db
     name: task2
     env:
       - name: MYSQL_ROOT_PASSWORD
