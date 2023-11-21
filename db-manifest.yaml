@@ -24,4 +24,4 @@ spec:
     app: task2-db
   ports:
     - port: 3306
-      protocol: TCP
+      protocol: 3306
